@@ -10,7 +10,7 @@ const Home = () => {
   useEffect(() => {
     //   setLoading(true);
     axios
-      .get("http://localhost:8000/")
+      .get("https://bboard-backend.onrender.com/")
       .then((response) => {
         setNotes(response.data.data);
       })

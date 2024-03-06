@@ -14,7 +14,7 @@ const CreateNote = () => {
       content,
     };
     axios
-      .post("http://localhost:8000/", data)
+      .post("https://bboard-backend.onrender.com/", data)
       .then(() => {
         navigate("/");
       })

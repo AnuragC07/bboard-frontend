@@ -9,7 +9,7 @@ const DeleteNote = ({ title, content }) => {
   const [note, setNote] = useState({});
   const handleDeleteNote = () => {
     axios
-      .delete(`http://localhost:8000/${id}`)
+      .delete(`https://bboard-backend.onrender.com/${id}`)
       .then((response) => {
         setNote(response.data);
         navigate("/");

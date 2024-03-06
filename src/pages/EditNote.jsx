@@ -10,7 +10,7 @@ const EditNote = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/${id}`)
+      .get(`https://bboard-backend.onrender.com/${id}`)
       .then((response) => {
         setContent(response.data.content);
         setTitle(response.data.title);
@@ -27,7 +27,7 @@ const EditNote = () => {
       content,
     };
     axios
-      .put(`http://localhost:8000/${id}`, data)
+      .put(`https://bboard-backend.onrender.com/${id}`, data)
       .then(() => {
         navigate("/");
       })

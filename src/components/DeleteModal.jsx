@@ -9,7 +9,7 @@ const DeleteModal = ({ title, content, onClose }) => {
   const { id } = useParams();
   const handleDeleteBook = () => {
     axios
-      .delete(`http://localhost:8000/${id}`)
+      .delete(`https://bboard-backend.onrender.com/${id}`)
       .then(() => {
         navigate("/");
       })
